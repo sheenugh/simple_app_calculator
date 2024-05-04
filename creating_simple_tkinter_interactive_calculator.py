@@ -15,11 +15,29 @@ import time
 from colorama import init, Fore, Style
 
 
-
 # || ACTUAL CODES ||
-# - Introduction code.
+# - INTRODUCTION OF THE NEO COLLBOT.
+init() # - Initialize
+
+# - Code for printing the text with typewriter effect:
+def printing_text_with_typewriter_effect():
+    for char in text:
+        print(char, end='', flush=True)
+        time.sleep(delay)
+        
+text = "Welcome to Neo Collbot"
+
+# Choose a fancy font style
+font = pyfiglet.Figlet(font='cyberlarge')
+
+# Print the text with fancy font style and typewriter effect
+print(Fore.BLUE + Style.BRIGHT, end='')
+printing_text_with_typewriter_effect(font.renderText(text))
+print(Style.RESET_ALL)
+
 
 # - Information about Neo_Collbot
+
 
 # - Root tkinter, title, and window's size
 window = Tk()
@@ -35,7 +53,7 @@ def ask_try_again():
         num2_entry_widget.delete(0, END)
         result_output.config(text="")
     else:
-        messagebox.showinfo("Neo_Collbot 🤖", "Thank you for you participation. 💖😊")
+        messagebox.showinfo("Neo Collbot 🤖", "Thank you for you participation. 💖😊")
         window.destroy()
         
 # - Try and except category.
