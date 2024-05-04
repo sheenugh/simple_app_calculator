@@ -14,6 +14,8 @@ import pyfiglet
 import sys
 import time
 from colorama import init, Fore, Style
+import pygame
+import tkinter as tk
 
 
 # || ACTUAL CODES ||
@@ -21,51 +23,60 @@ from colorama import init, Fore, Style
 # - INTRODUCTION OF THE NEO COLLBOT.
 init() # - Initialize
 
-# - Code for printing the text with typewriter effect:
-def printing_welcoming_remarks_with_typewriter_effect(text, delay=0.000005):
-    for char in text:
-        print(char, end='', flush=True)
-        time.sleep(delay)
+# # - Code for printing the text with typewriter effect:
+# def printing_welcoming_remarks_with_typewriter_effect(text, delay=0.000005):
+#     for char in text:
+#         print(char, end='', flush=True)
+#         time.sleep(delay)
         
-text = "Welcome to Neo Collbot 🤖!"
+# text = "Welcome to Neo Collbot 🤖!"
 
-font = pyfiglet.Figlet(font='cyberlarge') # Choosing a fancy font.
+# font = pyfiglet.Figlet(font='cyberlarge') # Choosing a fancy font.
 
-# - Print the text with fancy font style and typewriter effect
-print(Fore.BLUE + Style.BRIGHT, end='')
-printing_welcoming_remarks_with_typewriter_effect(font.renderText(text))
-print(Style.RESET_ALL)
+# # - Print the text with fancy font style and typewriter effect
+# print(Fore.BLUE + Style.BRIGHT, end='')
+# printing_welcoming_remarks_with_typewriter_effect(font.renderText(text))
+# print(Style.RESET_ALL)
 
-# - INFORMATION ABOUT NEO COLLBOT:
-# - Typewriter effect for printing the info.
-def typewriter_effect_with_color(text, delay=0.05, color='\033[1;32m'):
-    for char in text:
-        sys.stdout.write(color + char)  # Set text color
-        sys.stdout.flush()
-        time.sleep(delay)
+# # - INFORMATION ABOUT NEO COLLBOT:
+# # - Typewriter effect for printing the info.
+# def typewriter_effect_with_color(text, delay=0.05, color='\033[1;32m'):
+#     for char in text:
+#         sys.stdout.write(color + char)  # Set text color
+#         sys.stdout.flush()
+#         time.sleep(delay)
 
-# Text to print with typewriter effect and color
-text = "Hello! My name is Neo Collins, a programmed bot. My master just created me a while ago for some purpose.\nI function as a chatbot as well as a simple calculator. Do you want to try my calculator?\n"
+# # Text to print with typewriter effect and color
+# text = "Hello! My name is Neo Collins, a programmed bot. My master just created me a while ago for some purpose.\nI function as a chatbot as well as a simple calculator. Do you want to try my calculator?\n"
 
-# Print text with typewriter effect and color
-typewriter_effect_with_color(text)
+# # Print text with typewriter effect and color
+# typewriter_effect_with_color(text)
 
-user_answer = input("Enter your response (y/n): ").lower()
+# user_answer = input("Enter your response (y/n): ").lower()
 
-if user_answer == "n":
-    print("Thank you for your time.")
-elif user_answer == "y":
-    getting_ready = input("Are you now ready (y/n): ").lower()
-    if getting_ready == "n":
-        print("Thank you for your time.")
-    elif getting_ready == "y":
-        print("Let's get started!")
-    else:
-        print("Invalid input. Please enter 'y' or 'n'.")
-else:
-    print("Invalid input. Please enter 'y' or 'n'.")
+# if user_answer == "n":
+#     print("Thank you for your time.")
+# elif user_answer == "y":
+#     getting_ready = input("Are you now ready (y/n): ").lower()
+#     if getting_ready == "n":
+#         print("Thank you for your time.")
+#     elif getting_ready == "y":
+#         print("Let's get started!")
+#     else:
+#         print("Invalid input. Please enter 'y' or 'n'.")
+# else:
+#     print("Invalid input. Please enter 'y' or 'n'.")
 
 
+# - Code for BG music
+def play_background_music(file_path):
+        pygame.mixer.init()
+        pygame.mixer.music.load(file_path)
+        pygame.mixer.music.play(-1)  
+        
+music_file_path = 'y2mate.com - Quiet  Lofi Keep You Safe  Deep focus StudyWork  Lofi hip hop  Lofi chill .mp3'
+play_background_music(music_file_path)
+pygame.time.delay(10)  
 
 
 # =================================================================================================================
@@ -118,6 +129,7 @@ def calculation(option):
     
     except:
         messagebox.showerror("Error", "Oops! Something went wrong. Please check your input and try again 😉")
+
 
 # - ASK THE USER FOR THE TWO NUMBERS.
 # - Creating the label 1 and entry 1 for user to input his/her desired number.
