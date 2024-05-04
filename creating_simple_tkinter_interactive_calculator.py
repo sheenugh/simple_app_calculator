@@ -38,11 +38,14 @@ try:
             result = number1_inputted_value / number2_inputted_value
         else:
             messagebox.showerror("Error.")
+            return
             
-        result_output.config(text=str(result))
+        rounded_off_result = round(result, 2)
+        result_output.config(text=str(rounded_off_result))
 
-except: 
-    messagebox.showerror("Error")
+    
+except Exception as e: 
+    messagebox.showerror("Error", str(e))
 
         
     
