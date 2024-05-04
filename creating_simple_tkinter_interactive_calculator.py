@@ -24,6 +24,16 @@ window.geometry("500x300")
 
 
 # || FUNCTION/S || 
+# Function to ask if the user wants to try again
+def ask_try_again():
+    answer = messagebox.askyesno("Want to try again? 🤔", "Do you want to perform another calculation?")
+    if answer:
+        num1_entry_widget.delete(0, END)
+        num2_entry_widget.delete(0, END)
+        result_output.config(text="")
+    else:
+        window.destroy()
+        
 # - Try and except category.
 def calculation(option): 
     try:
@@ -45,6 +55,7 @@ def calculation(option):
         rounded_off_result = round(result, 2)
         result_output.config(text=str(rounded_off_result))
         
+        ask_try_again()
         
     except ValueError: 
         messagebox.showerror("Error", "Please input 'any number' only")
@@ -52,8 +63,6 @@ def calculation(option):
     except:
         messagebox.showerror("Error", "Oops! Something went wrong. Please check your input and try again")
 
-        
-    
 # - ASK THE USER FOR THE TWO NUMBERS.
 # - Creating the label 1 and entry 1 for user to input his/her desired number.
 num1 = Label(window, text = "Enter your first number:", font=("times", 18))
