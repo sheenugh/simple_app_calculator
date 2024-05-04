@@ -24,10 +24,12 @@ window.geometry("500x300")
 
 
 # || FUNCTION/S || 
-try:
-    def calculation(option): 
+# - Try and except category.
+def calculation(option): 
+    try:
         number1_inputted_value = float(num1_entry_widget.get())
         number2_inputted_value = float(num2_entry_widget.get())
+        # - If,elif,else code.
         if (option == "+"):
             result = number1_inputted_value + number2_inputted_value
         elif (option == "-"):
@@ -37,15 +39,18 @@ try:
         elif (option == "/"):
             result = number1_inputted_value / number2_inputted_value
         else:
-            messagebox.showerror("Error.")
+            pass
             return
             
         rounded_off_result = round(result, 2)
         result_output.config(text=str(rounded_off_result))
-
+        
+        
+    except ValueError: 
+        messagebox.showerror("Error", "Please input 'any number' only")
     
-except Exception as e: 
-    messagebox.showerror("Error", str(e))
+    except:
+        messagebox.showerror("Error", "Oops! Something went wrong. Please check your input and try again")
 
         
     
@@ -64,7 +69,7 @@ num2_entry_widget.pack()
 
 # - ASK USER FOR THE OPERATION
 # - Creating a label for asking the user of his/her desired operation.
-button_label = Label(window, text = "What operation do you want to use?", font=("times", 17))
+button_label = Label(window, text = "Choose the operation you want to use", font=("times", 17))
 button_label.pack()
 
 # - BUTTON FOR OPERATIONS
@@ -91,7 +96,8 @@ result_label.pack()
 result_output = Label(window, bg="White", width=20, font=("Helvetica", 12), relief="sunken", background="lightgray")
 result_output.pack()
 
-# - Try and except category.
-# - If,elif,else code.
+# - Asking the user if he/she wants to try again.
+
+
 # - Tkinter mainloop
 window.mainloop()
