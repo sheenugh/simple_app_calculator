@@ -10,17 +10,24 @@
 # || IMPORTS || 
 from tkinter import *
 from tkinter import messagebox
+import pyfiglet
+import time
+from colorama import init, Fore, Style
+
 
 
 # || ACTUAL CODES ||
+# - Introduction code.
+
+# - Information about Neo_Collbot
+
 # - Root tkinter, title, and window's size
 window = Tk()
 window.title("Neo_Collculator 🧮")
 window.geometry("500x300")
 
-
 # || FUNCTION/S || 
-# Function to ask if the user wants to try again
+# - Function to ask if the user wants to try again
 def ask_try_again():
     answer = messagebox.askyesno("Want to try again? 🤔", "Do you want to perform another calculation?")
     if answer:
