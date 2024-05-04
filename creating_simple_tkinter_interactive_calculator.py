@@ -21,6 +21,9 @@ window.geometry("500x300")
 # - Creating a label to input the user's desired number.
 num1 = Label(window, text = "Enter your first number:", font=("Arial", 15))
 num1.pack()
+num1_entry_widget = Entry(window, font=("Helvetica", 12))
+num1_entry_widget.pack()
+
 
 # - Ask the the user of two numbers 
 
