@@ -20,20 +20,20 @@ import tkinter as tk
 
 # || ACTUAL CODES ||
 # - FOR PRINTING A TEXT IN TERMINAL ONLY
-# - INTRODUCTION OF THE NEO COLLBOT.
+# - INTRODUCTION OF THE NEO COLLBOT
 init() # - Initialize
 
-# - Code for printing the text with typewriter effect:
+# - Code for printing the text with typewriter effect.
 def printing_welcoming_remarks_with_typewriter_effect(text, delay=0.000005):
     for char in text:
         print(char, end='', flush=True)
         time.sleep(delay)
         
-text = "Welcome to Neo Collbot 🤖!"
+text = "Welcome to Neo CollBot 🤖!"
 
-font = pyfiglet.Figlet(font='cyberlarge') # Choosing a fancy font.
+font = pyfiglet.Figlet(font='cyberlarge') # - Choosing a fancy font.
 
-# - Print the text with fancy font style and typewriter effect
+# - Print the text with fancy font style and typewriter effect.
 print(Fore.BLUE + Style.BRIGHT, end='')
 printing_welcoming_remarks_with_typewriter_effect(font.renderText(text))
 print(Style.RESET_ALL)
@@ -42,18 +42,18 @@ print(Style.RESET_ALL)
 # - Typewriter effect for printing the info.
 def typewriter_effect_with_color(text, delay=0.05, color='\033[1;32m'):
     for char in text:
-        sys.stdout.write(color + char)  # Set text color
+        sys.stdout.write(color + char)  # - Set text color.
         sys.stdout.flush()
         time.sleep(delay)
 
-# Text to print with typewriter effect and color
+# - Text to print with typewriter effect and color.
 text = "Hello! My name is Neo Collins, a programmed bot. My master just created me a while ago for some purpose.\nI function as a chatbot as well as a simple calculator. Do you want to try my calculator?\n"
 
-# Print text with typewriter effect and color
+# - Print text with typewriter effect and color.
 typewriter_effect_with_color(text)
 
+# - Asking the user if he/she will proceed.
 user_answer = input("Enter your response (y/n): ").lower()
-
 if user_answer == "n":
     print("Thank you for your time.")
 elif user_answer == "y":
@@ -68,13 +68,13 @@ else:
     print("Invalid input. Please enter 'y' or 'n'.")
 
 
-# - Code for BG music
+# - Code for BG music.
 def play_background_music(file_path):
         pygame.mixer.init()
         pygame.mixer.music.load(file_path)
         pygame.mixer.music.play(-1)  
         
-music_file_path = 'LoFi 3 Min Countdown - Chill Sunset.mp3'
+music_file_path = 'lofi_bg_music.mp3'
 play_background_music(music_file_path)
 pygame.time.delay(10)  
 
@@ -83,14 +83,14 @@ pygame.time.delay(10)
 
 
 # - FOR TKINTER WINDOW
-# - Root tkinter, title, and window's size
+# - Root tkinter, title, and window's size.
 window = Tk()
-window.title("Neo_Collculator 🧮")
+window.title("Neo Collculator 🧮")
 window.geometry("500x300")
 
 
 # || FUNCTION/S || 
-# - Function to ask if the user wants to try again
+# - Function to ask if the user wants to try again.
 def ask_try_again():
     answer = messagebox.askyesno("Want to try again? 🤔", "Do you want to perform another calculation?")
     if answer:
@@ -98,7 +98,7 @@ def ask_try_again():
         num2_entry_widget.delete(0, END)
         result_output.config(text="")
     else:
-        messagebox.showinfo("Neo Collbot 🤖", "Thank you for you participation. 💖😊")
+        messagebox.showinfo("Neo CollBot 🤖", "Thank you for you participation. 💖😊")
         window.destroy()
         
 # - Try and except category.
@@ -131,7 +131,7 @@ def calculation(option):
         messagebox.showerror("Error", "Oops! Something went wrong. Please check your input and try again 😉")
 
 
-# - ASK THE USER FOR THE TWO NUMBERS.
+# - ASK THE USER FOR THE TWO NUMBERS
 # - Creating the label 1 and entry 1 for user to input his/her desired number.
 num1 = Label(window, text = "Enter your first number:", font=("times", 18))
 num1.pack()
@@ -172,8 +172,6 @@ result_label.pack()
 
 result_output = Label(window, bg="White", width=20, font=("Helvetica", 12), relief="sunken", background="lightgray")
 result_output.pack()
-
-# - Asking the user if he/she wants to try again.
 
 
 # - Tkinter mainloop
