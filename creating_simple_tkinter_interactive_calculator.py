@@ -18,14 +18,21 @@ window = Tk()
 window.title("Calculator")
 window.geometry("500x300")
 
-# - Creating a label to input the user's desired number.
+# - ASK THE USER FOR THE TWO NUMBERS.
+# - Creating the label 1 and entry 1 for user to input his/her desired number.
 num1 = Label(window, text = "Enter your first number:", font=("Arial", 15))
 num1.pack()
 num1_entry_widget = Entry(window, font=("Helvetica", 12))
 num1_entry_widget.pack()
 
+# - Creating the label 2 and entry 2 for user to input his/her desired number.
+num2 = Label(window, text = "Enter your first number:", font=("Arial", 15))
+num2.pack()
+num2_entry_widget = Entry(window, font=("Helvetica", 12))
+num2_entry_widget.pack()
 
-# - Ask the the user of two numbers 
+
+
 
 # - Ask user about the operation.
 
