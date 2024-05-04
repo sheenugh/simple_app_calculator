@@ -32,9 +32,11 @@ num2_entry_widget = Entry(window, font=("Helvetica", 12))
 num2_entry_widget.pack()
 
 
+# - ASK USER FOR THE OPERATION
+# - # - Creating the label 1 and entry 1 for user to input his/her desired number.
+button_label = Label(window, text = "What operation do you want to use?", font=("Arial", 15))
+button_label.pack()
 
-
-# - Ask user about the operation.
 
 # - Try and except category.
 # - If,elif,else code.
