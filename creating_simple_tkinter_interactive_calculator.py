@@ -7,19 +7,15 @@
 
 
 # ========== PSEUDO CODE ==========
-
-
-# || LIBRARIES \ PACKAGERS ||
-
-
 # || IMPORTS || 
 from tkinter import *
 from tkinter import messagebox
 
+
 # || ACTUAL CODES ||
 # - Root tkinter, title, and window's size
 window = Tk()
-window.title("Calculator")
+window.title("Neo_Collculator 🧮")
 window.geometry("500x300")
 
 
@@ -32,6 +28,7 @@ def ask_try_again():
         num2_entry_widget.delete(0, END)
         result_output.config(text="")
     else:
+        messagebox.showinfo("Neo_Collbot 🤖", "Thank you for you participation. 💖😊")
         window.destroy()
         
 # - Try and except category.
@@ -58,10 +55,10 @@ def calculation(option):
         ask_try_again()
         
     except ValueError: 
-        messagebox.showerror("Error", "Please input 'any number' only")
+        messagebox.showerror("Error", "Please input 'any number' only 😊")
     
     except:
-        messagebox.showerror("Error", "Oops! Something went wrong. Please check your input and try again")
+        messagebox.showerror("Error", "Oops! Something went wrong. Please check your input and try again 😉")
 
 # - ASK THE USER FOR THE TWO NUMBERS.
 # - Creating the label 1 and entry 1 for user to input his/her desired number.
