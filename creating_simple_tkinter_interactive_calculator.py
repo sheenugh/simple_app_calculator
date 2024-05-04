@@ -37,19 +37,19 @@ button_label = Label(window, text = "What operation do you want to use?", font=(
 button_label.pack()
 # - Button for operations.
 frame = Frame(window) 
-frame.pack(pady=10)
+frame.pack(pady=10, padx=10)
 # - Addition button.
 addition_button =Button(frame, text="Addition", font=("serif", 11))
-addition_button.pack()
+addition_button.pack(side=LEFT, padx=8)
 # - Subtraction button.
 subtraction_button =Button(frame, text="Subtraction", font=("serif", 11))
-subtraction_button.pack()
+subtraction_button.pack(side=LEFT, padx=8)
 # - Multiplication button.
 multiplication_button =Button(frame, text="Multiplication", font=("serif", 11))
-multiplication_button.pack()
+multiplication_button.pack(side=LEFT, padx=8)
 # - Division button.
 division_button =Button(frame, text="Division", font=("serif", 11))
-division_button.pack()
+division_button.pack(side=LEFT, padx=8)
 
 # - Try and except category.
 # - If,elif,else code.
