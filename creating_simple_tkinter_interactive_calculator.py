@@ -35,7 +35,8 @@ num2_entry_widget.pack()
 # - Creating a label for asking the user of his/her desired operation.
 button_label = Label(window, text = "What operation do you want to use?", font=("times", 17))
 button_label.pack()
-# - Button for operations.
+
+# - BUTTON FOR OPERATIONS
 frame = Frame(window) 
 frame.pack(pady=10, padx=10)
 # - Addition button.
@@ -50,6 +51,14 @@ multiplication_button.pack(side=LEFT, padx=8)
 # - Division button.
 division_button =Button(frame, text="Division", font=("serif", 11))
 division_button.pack(side=LEFT, padx=8)
+
+# - RESULT LABEL AND ENTRY
+# - Result label.
+result_label = Label(window, text="Result", font=('times', 18))
+result_label.pack()
+
+result_output = Label(window, bg="White", width=20, font=("Helvetica", 12))
+result_output.pack()
 
 # - Try and except category.
 # - If,elif,else code.
