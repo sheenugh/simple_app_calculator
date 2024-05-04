@@ -57,7 +57,7 @@ division_button.pack(side=LEFT, padx=8)
 result_label = Label(window, text="Result", font=('times', 18))
 result_label.pack()
 
-result_output = Label(window, bg="White", width=20, font=("Helvetica", 12))
+result_output = Label(window, bg="White", width=20, font=("Helvetica", 12), relief="sunken", background="lightgray")
 result_output.pack()
 
 # - Try and except category.
