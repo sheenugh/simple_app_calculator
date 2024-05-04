@@ -45,11 +45,27 @@ def typewriter_effect_with_color(text, delay=0.05, color='\033[1;32m'):
         time.sleep(delay)
 
 # Text to print with typewriter effect and color
-text = "Hello! My name is Neo Collins, a programmed bot. My master just created me a while ago for some purpose. \n I function as a chatbot as well as a simple calculator. Do you want to try my calculator?"
-
+text = "Hello! My name is Neo Collins, a programmed bot. My master just created me a while ago for some purpose.\nI function as a chatbot as well as a simple calculator. Do you want to try my calculator?\n"
 
 # Print text with typewriter effect and color
 typewriter_effect_with_color(text)
+
+user_answer = input("Enter your response (y/n): ").lower()
+
+if user_answer == "n":
+    print("Thank you for your time.")
+elif user_answer == "y":
+    getting_ready = input("Are you now ready (y/n): ").lower()
+    if getting_ready == "n":
+        print("Thank you for your time.")
+    elif getting_ready == "y":
+        print("Let's get started!")
+    else:
+        print("Invalid input. Please enter 'y' or 'n'.")
+else:
+    print("Invalid input. Please enter 'y' or 'n'.")
+
+
 
 
 # =================================================================================================================
