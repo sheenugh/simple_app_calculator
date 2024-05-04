@@ -37,12 +37,13 @@ try:
         elif (option == "/"):
             result = number1_inputted_value / number2_inputted_value
         else:
-            messagebox.showerror("Error. Tanga.")
+            messagebox.showerror("Error.")
             
         result_output.config(text=str(result))
+
 except: 
     messagebox.showerror("Error")
-    
+
         
     
 # - ASK THE USER FOR THE TWO NUMBERS.
@@ -67,16 +68,16 @@ button_label.pack()
 frame = Frame(window) 
 frame.pack(pady=10, padx=10)
 # - Addition button.
-addition_button =Button(frame, text="Addition", font=("serif", 11))
+addition_button =Button(frame, text="Addition", font=("serif", 11), command=lambda:calculation("+"))
 addition_button.pack(side=LEFT, padx=8)
 # - Subtraction button.
-subtraction_button =Button(frame, text="Subtraction", font=("serif", 11))
+subtraction_button =Button(frame, text="Subtraction", font=("serif", 11),  command=lambda:calculation("-"))
 subtraction_button.pack(side=LEFT, padx=8)
 # - Multiplication button.
-multiplication_button =Button(frame, text="Multiplication", font=("serif", 11))
+multiplication_button =Button(frame, text="Multiplication", font=("serif", 11),  command=lambda:calculation("*"))
 multiplication_button.pack(side=LEFT, padx=8)
 # - Division button.
-division_button =Button(frame, text="Division", font=("serif", 11))
+division_button =Button(frame, text="Division", font=("serif", 11),  command=lambda:calculation("/"))
 division_button.pack(side=LEFT, padx=8)
 
 # - RESULT LABEL AND ENTRY
