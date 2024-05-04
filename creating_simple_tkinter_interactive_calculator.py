@@ -7,10 +7,14 @@
 
 
 # ========== PSEUDO CODE ==========
+
+
 # || LIBRARIES \ PACKAGERS ||
+
 
 # || IMPORTS || 
 from tkinter import *
+from tkinter import messagebox
 
 # || ACTUAL CODES ||
 # - Root tkinter, title, and window's size
@@ -18,6 +22,29 @@ window = Tk()
 window.title("Calculator")
 window.geometry("500x300")
 
+
+# || FUNCTION/S || 
+try:
+    def calculation(option): 
+        number1_inputted_value = float(num1_entry_widget.get())
+        number2_inputted_value = float(num2_entry_widget.get())
+        if (option == "+"):
+            result = number1_inputted_value + number2_inputted_value
+        elif (option == "-"):
+            result = number1_inputted_value - number2_inputted_value
+        elif (option == "*"):
+            result = number1_inputted_value * number2_inputted_value
+        elif (option == "/"):
+            result = number1_inputted_value / number2_inputted_value
+        else:
+            messagebox.showerror("Error. Tanga.")
+            
+        result_output.config(text=str(result))
+except: 
+    messagebox.showerror("Error")
+    
+        
+    
 # - ASK THE USER FOR THE TWO NUMBERS.
 # - Creating the label 1 and entry 1 for user to input his/her desired number.
 num1 = Label(window, text = "Enter your first number:", font=("times", 18))
